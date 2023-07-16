@@ -1,0 +1,16 @@
+version: 2
+sources:
+  - name: public
+    description: source tpch data
+    database: migratedb
+    schema: public
+    tables:
+      - name: address
+        description: main order tracking table
+      - name: currency
+        description: main order tracking table
+      - name: customer
+        description: main order tracking table
+      - name: employee
+        description: main order tracking table
+      
