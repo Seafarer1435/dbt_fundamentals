@@ -1,4 +1,4 @@
-{% macro variance() %}
+{% macro variance(boundary=10) %}
 {% set query %}
 with before_count as
 (
@@ -23,7 +23,7 @@ select BEFORE_COUNT.table_name,
  as variance_percent
 from BEFORE_COUNT join AFTER_COUNT on CONCAT('STG_',before_count.table_name)=after_count.table_name
 )
-select * from variance_test where variance_percent>10;
+select * from variance_test where variance_percent>{{boundary}};
 {% endset %}
 
 
