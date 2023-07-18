@@ -23,3 +23,4 @@ FROM renamed
 )
 
 select * from convert_nulls_to_a_value
+

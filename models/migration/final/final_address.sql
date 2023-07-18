@@ -1,1 +1,1 @@
-select * from {{ source('public', 'address') }}
+select * from {{ ref( 'stg_address' ) }}
